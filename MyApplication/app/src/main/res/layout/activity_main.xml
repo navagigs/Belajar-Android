@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.navagiaginasta.myapplication.MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:contextClickable="false"
+        android:textSize="23dp"
+        android:layout_alignEnd="@+id/editText1" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText1"
+        android:layout_below="@+id/textView1"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="tombolonclick"
+        android:text="Button"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText1"
+        android:layout_alignParentRight="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jalan-jalan"
+        android:id="@+id/cbJava"
+        android:checked="false"
+        android:layout_below="@+id/cbPHP"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jogging"
+        android:id="@+id/cbPHP"
+        android:checked="false"
+        android:layout_below="@+id/button1"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasil Check"
+        android:id="@+id/button"
+        android:onClick="klikHasil"
+        android:layout_below="@+id/cbJava"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgJenisKelamin"
+        android:layout_below="@+id/button1"
+        android:layout_toEndOf="@+id/exit">
+
+        <RadioButton
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="Laki-Laki"
+            android:id="@+id/rLaki2"
+            android:checked="false"
+            android:layout_below="@+id/rPerempuan"
+            android:layout_alignLeft="@+id/button" />
+
+        <RadioButton
+            android:layout_width="151dp"
+            android:layout_height="wrap_content"
+            android:text="Perempuan"
+            android:id="@+id/rPerempuan"
+            android:checked="false"
+            android:layout_below="@+id/cbPHP"
+            android:layout_alignLeft="@+id/button"
+            android:layout_alignStart="@+id/button" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasil radio"
+        android:id="@+id/button2"
+        android:onClick="klikHasil2"
+        android:layout_marginRight="62dp"
+        android:layout_below="@+id/rgJenisKelamin"
+        android:layout_alignStart="@+id/tvHasil"
+        android:layout_alignEnd="@+id/edtPanjang" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtPanjang"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hitung"
+        android:id="@+id/bhitung"
+        android:layout_alignParentStart="true"
+        android:onClick="hitungLuas"
+        android:layout_below="@+id/edtPanjang"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="exit"
+        android:id="@+id/exit"
+        android:onClick="exit"
+        android:layout_alignBottom="@+id/bhitung"
+        android:layout_toEndOf="@+id/bhitung" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tampilkan Semua"
+        android:id="@+id/nama"
+        android:onClick="tampilNama"
+        android:layout_below="@+id/edtPanjang"
+        android:layout_alignEnd="@+id/edtPanjang" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvHasil"
+        android:textSize="16dp"
+        android:layout_below="@+id/exit"
+        android:layout_alignEnd="@+id/exit" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasilnya :"
+        android:id="@+id/textView"
+        android:autoText="false"
+        android:textSize="16dp"
+        android:layout_below="@+id/bhitung"
+        android:layout_toStartOf="@+id/exit" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hasilNama"
+        android:textSize="18dp"
+        android:layout_below="@+id/textView" />
+
+</RelativeLayout>
